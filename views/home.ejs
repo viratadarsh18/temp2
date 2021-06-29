@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+  </head>
+  <body class="home">
+
+    <img src="/images/bank.jpg" alt="bank">
+
+    <% if(cuurentUser){ %>
+      <h3 style="text-align : center">Welcome <%= cuurentUser %>  </h3>
+    <% }else{ %>
+      <h3 style="text-align : center">Please sign in first.</h3>
+    <% } %>
+
+
+  </body>
+</html>

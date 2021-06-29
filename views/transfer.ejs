@@ -1,0 +1,63 @@
+<%- include('partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body class="tranferBody">
+  <div class="tranfers">
+
+    <% data.forEach(function(foundData){ %>
+    <% if(foundData.email === cuurentUser){ %>
+    <p><%= foundData.firstName + " "+ foundData.lastName %></p>
+    <p>Available balance = <%= foundData.money %></p>
+    <form action="/transfer" method="post">
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Enter Email of benefactor</label>
+        <input name="emailsender" type="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Enter Amount</label>
+        <input name="sendmoney" type="number" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Add Money</button>
+    </form>
+    <p>
+      <hr class="dropdown-divider">
+    </p>
+    <% }else{ %>
+    <p><%= foundData.firstName + " "+ foundData.lastName %></p>
+    <p>Available balance = <%= foundData.money %></p>
+    <form action="/transfer" method="post">
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Enter Email of beneficiary :</label>
+        <input name="emailsender" type="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Enter Amount</label>
+        <input name="sendmoney" type="number" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Send Money</button>
+    </form>
+    <p>
+      <hr class="dropdown-divider">
+    </p>
+    <% } %>
+    <% }) %>
+  </div>
+
+</body>
+
+</html>

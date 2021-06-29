@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body class="logs">
+    <% logData.forEach(function(logs){ %>
+      <h5 style="text-align : center"><%= logs.log %></h5>
+    <% }) %>
+
+  </body>
+</html>
