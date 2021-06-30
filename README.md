@@ -11,7 +11,7 @@ One can Register, Login and then add money to own's account or transfer to other
 
 **Already registered username and password :-**
 
-User Email : amit@gmail.com
+User Email : adarsh@gmail.com
 
 Password : Test2
 
